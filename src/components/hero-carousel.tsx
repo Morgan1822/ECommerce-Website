@@ -132,42 +132,41 @@ export function HeroCarousel() {
               </div>
             </div>
 
-            {/* Slide Navigation Controls */}
-            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2">
+            {/* Unified Slide Navigation Controls & Pagination Cluster (Bottom Right) */}
+            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2 bg-black/40 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-full border border-white/20 shadow-lg">
               <button
                 onClick={() =>
                   setCurrentSlide((prev) => (prev - 1 + bannerSlides.length) % bannerSlides.length)
                 }
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 hover:bg-white/35 active:bg-white/50 text-white backdrop-blur-md flex items-center justify-center transition-all border border-white/20 shadow-xs"
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 hover:bg-white/35 active:bg-white/50 text-white flex items-center justify-center transition-all"
                 aria-label="Previous Banner"
               >
-                <ChevronLeft className="w-4 h-4" />
+                <ChevronLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               </button>
-              <button
-                onClick={() => setCurrentSlide((prev) => (prev + 1) % bannerSlides.length)}
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 hover:bg-white/35 active:bg-white/50 text-white backdrop-blur-md flex items-center justify-center transition-all border border-white/20 shadow-xs"
-                aria-label="Next Banner"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
-            </div>
 
-            {/* Dot & Slide Number Indicators */}
-            <div className="absolute bottom-5 left-6 sm:bottom-7 sm:left-10 z-20 flex items-center gap-2">
-              <div className="flex items-center gap-1.5 bg-black/30 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+              {/* Pagination Dots */}
+              <div className="flex items-center gap-1.5 px-1 sm:px-1.5">
                 {bannerSlides.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrentSlide(idx)}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       idx === currentSlide
-                        ? "w-6 bg-brand-secondary shadow-xs"
+                        ? "w-5 sm:w-6 bg-brand-secondary shadow-xs"
                         : "w-2 bg-white/40 hover:bg-white/70"
                     }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   />
                 ))}
               </div>
+
+              <button
+                onClick={() => setCurrentSlide((prev) => (prev + 1) % bannerSlides.length)}
+                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 hover:bg-white/35 active:bg-white/50 text-white flex items-center justify-center transition-all"
+                aria-label="Next Banner"
+              >
+                <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              </button>
             </div>
           </div>
 
