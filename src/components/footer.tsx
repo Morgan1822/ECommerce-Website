@@ -15,6 +15,8 @@ import {
 } from "lucide-react";
 import { categories } from "@/lib/data/categories";
 
+import { BrandLogo } from "./brand-logo";
+
 export function Footer() {
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
@@ -32,35 +34,36 @@ export function Footer() {
     <footer className="bg-slate-950 text-slate-300 pt-10 sm:pt-14 pb-8 border-t-4 border-brand-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 pb-10 border-b border-slate-800">
-          {/* Quick'n'Smart Company Info (4 Cols) */}
+          {/* Quick N Smart Company Info (4 Cols) */}
           <div className="sm:col-span-2 lg:col-span-4 space-y-3.5">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-brand-primary via-indigo-600 to-brand-secondary flex items-center justify-center text-white shadow-md">
-                <Zap className="w-5 h-5 fill-amber-300 text-amber-300" />
-              </div>
-              <span className="font-heading text-xl sm:text-2xl font-black tracking-tight text-white">
-                Quick<span className="text-brand-primary">&apos;n&apos;</span><span className="text-brand-secondary">Smart</span>
-              </span>
+            <Link href="/" className="inline-block">
+              <BrandLogo size="lg" textColor="light" />
             </Link>
             <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
-              Your trusted enterprise for <strong>Domestic Logistics & Direct Retail Store</strong>. Direct warehouse pricing with lightning same-day Chennai dispatch.
+              Your trusted partner for <strong>Direct Retail E-Commerce & Domestic Logistics Services</strong>. Sourced directly with express same-day dispatch from our Ambattur hub.
             </p>
 
             <div className="space-y-2 text-xs text-slate-400 pt-1">
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-brand-secondary shrink-0 mt-0.5" />
                 <span>
-                  <strong>Ambattur Headquarters & Hub:</strong><br />
-                  No 1, AP Arasu Street, Near Lenin Nagar, Ram Nagar, Ambattur, Chennai - 600053
+                  <strong>Ambattur Central Hub & Office:</strong><br />
+                  No 1, AP Arasu Street, Ram Nagar, Ambattur, Chennai - 600053
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-brand-primary" />
-                <span>+91 98401 23456 (Dispatch & Support)</span>
+                <Phone className="w-3.5 h-3.5 text-emerald-400" />
+                <span>
+                  <strong>Helpline / WhatsApp:</strong> +91 91760 96102
+                </span>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-amber-400" />
-                <span>orders@quicknsmart.in</span>
+                <Mail className="w-3.5 h-3.5 text-brand-accent" />
+                <span>tndeliveryqns@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2 text-emerald-400 font-semibold text-[11px]">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Operational Hours: 09:00 - 18:00 (Open Daily)</span>
               </div>
             </div>
           </div>
@@ -154,9 +157,9 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-6 sm:pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left">
           <div className="flex items-center justify-center gap-1 flex-wrap">
-            <span>© 2026 Quick&apos;n&apos;Smart (Ambattur, Chennai). Made with</span>
-            <Heart className="w-3.5 h-3.5 text-brand-primary fill-brand-primary" />
-            <span>for Indian Retail & Logistics.</span>
+            <span>© 2026 Quick N Smart (QNS Logistics & Retail, Ambattur). Made with</span>
+            <Heart className="w-3.5 h-3.5 text-brand-secondary fill-brand-secondary" />
+            <span>for Indian Retail & Express Logistics.</span>
           </div>
 
           {/* Payment Chips */}

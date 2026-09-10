@@ -19,22 +19,22 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Quick'n'Smart | Express Logistics & Direct Retail Store • Ambattur, Chennai",
-  description: "Quick'n'Smart — Premier Domestic Logistics, Courier & Direct E-Commerce Store headquartered in Ambattur, Chennai (600053). Same-day delivery across Chennai and Pan-India express dispatch.",
+  title: "Quick N Smart (QNS) | Logistics & Direct Retail Store • Ambattur, Chennai",
+  description: "Quick N Smart (QNS) — Professional Domestic Logistics, Courier & Direct E-Commerce Store headquartered in Ambattur, Chennai (600053). Sourced directly from Ambattur Hub with same-day Chennai delivery.",
   keywords: [
-    "Quick n Smart Ambattur",
-    "Quick and Smart Chennai",
-    "Ambattur logistics",
-    "Chennai courier service",
+    "Quick N Smart Ambattur",
+    "QNS Logistics Chennai",
+    "A2z pain relief kit",
+    "Ambattur courier service",
     "Direct retail store Chennai",
     "Kanjeevaram silk saree",
     "A2 Gir cow ghee",
     "ANC earbuds",
     "UPI payment",
   ],
-  authors: [{ name: "Quick'n'Smart Ambattur Team" }],
+  authors: [{ name: "Quick N Smart Team" }],
   openGraph: {
-    title: "Quick'n'Smart | Logistics & Direct Retail Store",
+    title: "Quick N Smart (QNS) | Logistics & Direct Retail Store",
     description: "Ambattur, Chennai • Express Courier, Domestic Logistics & Direct E-Commerce Store.",
     type: "website",
     locale: "en_IN",
@@ -48,7 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${outfit.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#FAFAFD] text-gray-900 selection:bg-brand-purple/20 selection:text-brand-purple">
+      <body className="min-h-screen flex flex-col bg-[#FAFAFD] text-gray-900 selection:bg-brand-primary/20 selection:text-brand-primary">
         <AnnouncementBar />
         <Navbar />
         <main className="flex-1">{children}</main>

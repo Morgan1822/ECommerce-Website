@@ -17,13 +17,15 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          primary: "#4F46E5",    // Royal Electric Indigo
-          primaryHover: "#4338CA",
-          secondary: "#EA580C",  // Speed Saffron Orange
-          secondaryHover: "#C2410C",
-          accent: "#D97706",     // Smart Gold / Amber
-          emerald: "#059669",    // Express Green
-          navy: "#0F172A",       // Deep Slate Navy
+          primary: "#1E40AF",      // Deep Cobalt / Royal Blue (from QNS phone frame & orbital ring)
+          primaryHover: "#1D4ED8", // Hover state
+          secondary: "#DC2626",    // QNS Crimson / Flame Red (from QNS letters & orbital ring)
+          secondaryHover: "#B91C1C",
+          accent: "#F59E0B",       // Logistics Parcel Gold / Amber
+          accentHover: "#D97706",
+          emerald: "#16A34A",      // WhatsApp / Delivery Success Green
+          whatsapp: "#22C55E",     // Bright WhatsApp Green
+          navy: "#0F172A",         // Deep Slate Dark Navy
           slate: "#334155",
           border: "#E2E8F0",
           surface: "#F8FAFC",
@@ -37,9 +39,9 @@ module.exports = {
       },
       boxShadow: {
         soft: "0 2px 12px -2px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.04)",
-        card: "0 10px 25px -3px rgba(79, 70, 229, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03)",
-        speed: "0 10px 25px -3px rgba(234, 88, 12, 0.18)",
-        glow: "0 0 20px rgba(79, 70, 229, 0.25)",
+        card: "0 10px 25px -3px rgba(30, 64, 175, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03)",
+        speed: "0 10px 25px -3px rgba(220, 38, 38, 0.18)",
+        glow: "0 0 20px rgba(30, 64, 175, 0.25)",
       },
       borderRadius: {
         xl: "0.875rem",

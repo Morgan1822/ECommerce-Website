@@ -25,6 +25,8 @@ import { popularPincodes } from "@/lib/data/pincodes";
 import { PincodeModal } from "./pincode-modal";
 import { formatINR } from "@/lib/utils";
 
+import { BrandLogo } from "./brand-logo";
+
 export function Navbar() {
   const router = useRouter();
   const { toggleDrawer, getItemCount } = useCartStore();
@@ -85,22 +87,12 @@ export function Navbar() {
               className="lg:hidden p-2 rounded-xl text-slate-700 hover:bg-slate-100 transition-colors"
               aria-label="Toggle Navigation Menu"
             >
-              {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary" />}
+              {isMobileMenuOpen ? <X className="w-5 h-5 sm:w-6 sm:h-6 text-brand-secondary" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-brand-primary" />}
             </button>
 
-            {/* Quick'n'Smart Logo */}
-            <Link href="/" className="flex items-center gap-2 sm:gap-2.5 shrink-0 group">
-              <div className="w-9 h-9 sm:w-10 sm:h-10 md:w-11 md:h-11 rounded-xl sm:rounded-2xl bg-gradient-to-tr from-brand-primary via-indigo-600 to-brand-secondary flex items-center justify-center text-white shadow-md shadow-brand-primary/20 group-hover:scale-105 transition-transform shrink-0">
-                <Zap className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 fill-amber-300 text-amber-300" />
-              </div>
-              <div className="min-w-0">
-                <span className="font-heading text-lg sm:text-xl md:text-2xl font-black tracking-tight text-slate-900 flex items-center gap-1 leading-none">
-                  Quick<span className="text-brand-primary">&apos;n&apos;</span><span className="text-brand-secondary">Smart</span>
-                </span>
-                <span className="hidden xs:block text-[9px] sm:text-[10px] font-bold text-slate-500 tracking-wider uppercase truncate mt-0.5">
-                  Ambattur, Chennai • Express Store
-                </span>
-              </div>
+            {/* Quick N Smart Logo */}
+            <Link href="/" className="shrink-0">
+              <BrandLogo size="md" textColor="dark" />
             </Link>
 
             {/* Desktop Instant Search Bar */}

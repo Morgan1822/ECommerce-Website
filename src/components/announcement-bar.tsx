@@ -5,7 +5,7 @@ import { Zap, Truck, MapPin } from "lucide-react";
 
 export function AnnouncementBar() {
   return (
-    <div className="bg-gradient-to-r from-brand-primary via-indigo-700 to-brand-secondary text-white text-[11px] sm:text-xs md:text-sm font-semibold py-1.5 sm:py-2 px-3 sm:px-4 shadow-xs">
+    <div className="bg-gradient-to-r from-brand-primary via-blue-900 to-brand-secondary text-white text-[11px] sm:text-xs md:text-sm font-semibold py-1.5 sm:py-2 px-3 sm:px-4 shadow-xs">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-1.5 sm:gap-2">
         <div className="flex items-center gap-1.5 sm:gap-2 truncate">
           <span className="flex h-2 w-2 relative shrink-0">
@@ -13,9 +13,11 @@ export function AnnouncementBar() {
             <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
           </span>
           <span className="flex items-center gap-1 truncate">
-            <Zap className="w-3.5 h-3.5 text-amber-300 fill-amber-300 shrink-0" />
-            <span className="font-bold tracking-tight">QUICK&apos;N&apos;SMART:</span>
-            <span className="truncate">Ambattur Logistics & Direct Retail Store</span>
+            <span className="px-1.5 py-0.5 bg-brand-secondary text-white font-black rounded text-[10px] tracking-wider">
+              QNS
+            </span>
+            <span className="font-black tracking-tight">QUICK N SMART:</span>
+            <span className="truncate">Ambattur Logistics & Direct Store</span>
             <span className="hidden xs:inline-block bg-white/20 px-1.5 py-0.5 rounded text-amber-200 text-[10px] font-bold border border-white/25 shrink-0">
               NAMASTE20 (20% OFF)
             </span>
@@ -27,8 +29,12 @@ export function AnnouncementBar() {
             <MapPin className="w-3.5 h-3.5 text-amber-300" /> Ambattur Hub (600053)
           </span>
           <span>•</span>
+          <span className="flex items-center gap-1 text-emerald-300 font-bold">
+            ⚡ Open 09:00 - 18:00
+          </span>
+          <span>•</span>
           <span className="flex items-center gap-1">
-            <Truck className="w-3.5 h-3.5 text-amber-300" /> ⚡ Same-Day Chennai & Pan-India Express
+            <Truck className="w-3.5 h-3.5 text-amber-300" /> +91 91760 96102
           </span>
         </div>
       </div>

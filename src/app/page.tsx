@@ -29,19 +29,19 @@ export default function HomePage() {
       {/* 1. Quick'n'Smart Hero Carousel */}
       <HeroCarousel />
 
-      {/* 2. Quick'n'Smart Ambattur Logistics & Courier Strip */}
+      {/* 2. Quick N Smart Ambattur Logistics & Courier Strip */}
       <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-brand-primary via-indigo-900 to-slate-900 rounded-2xl sm:rounded-3xl p-5 sm:p-8 text-white shadow-md border border-indigo-800/40">
+        <div className="bg-gradient-to-r from-brand-primary via-blue-950 to-slate-950 rounded-2xl sm:rounded-3xl p-5 sm:p-8 text-white shadow-md border border-blue-800/40">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-center">
             <div className="lg:col-span-7 space-y-2">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/15 text-amber-300 text-[10px] sm:text-xs font-black uppercase tracking-wider">
-                <Truck className="w-3.5 h-3.5" /> Ambattur Express Logistics Hub
+                <Truck className="w-3.5 h-3.5" /> Ambattur Express Logistics Hub (QNS)
               </div>
               <h3 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-black font-heading leading-tight">
                 Ship Parcels & Direct Retail Goods from Chennai Hub
               </h3>
               <p className="text-xs sm:text-sm text-slate-200 max-w-lg leading-relaxed">
-                Quick&apos;n&apos;Smart provides domestic door-to-door courier services, B2B freight, and direct retail order fulfillment from our Ram Nagar, Ambattur hub (600053).
+                Quick N Smart provides professional domestic door-to-door courier services, B2B freight, and direct retail order fulfillment from our Ram Nagar, Ambattur hub (600053).
               </p>
             </div>
 
@@ -65,7 +65,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="text-[10px] sm:text-[11px] text-slate-200">
-                📍 <strong>Local Pickup:</strong> Ambattur, Anna Nagar, Mogappair & Chennai.
+                📍 <strong>Local Hub:</strong> Ambattur, Anna Nagar, Mogappair & Chennai Metro.
               </p>
             </div>
           </div>
@@ -151,16 +151,16 @@ export default function HomePage() {
 
       {/* 5. Promotional Coupon Banner */}
       <section className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-r from-brand-primary via-indigo-900 to-brand-secondary text-white p-5 sm:p-8 md:p-10 shadow-lg">
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-r from-brand-primary via-blue-900 to-brand-secondary text-white p-5 sm:p-8 md:p-10 shadow-lg">
           <div className="relative z-10 max-w-2xl space-y-2 sm:space-y-3">
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-amber-300 text-[10px] sm:text-xs font-black uppercase tracking-wider border border-white/20">
-              <Zap className="w-3.5 h-3.5 fill-amber-300" /> Quick&apos;n&apos;Smart Festive Offer
+              <Zap className="w-3.5 h-3.5 fill-amber-300" /> Quick N Smart Festive Offer
             </span>
             <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-black font-heading leading-tight">
               Get Flat 20% OFF on All Direct Retail Orders
             </h3>
             <p className="text-xs sm:text-sm text-slate-200">
-              Stock up on premium Kanjeevaram silks, pure Vedic Gir cow ghee, and high-performance ANC earbuds with coupon{" "}
+              Stock up on A2z Pain Relief Kits, pure Kanjeevaram silks, Vedic Gir cow ghee, and audio tech with coupon{" "}
               <strong className="underline text-amber-200">NAMASTE20</strong> at checkout.
             </p>
             <div className="pt-2 flex flex-wrap items-center gap-2.5 sm:gap-3">

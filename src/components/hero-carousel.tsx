@@ -20,36 +20,36 @@ import { formatINR } from "@/lib/utils";
 const bannerSlides = [
   {
     id: 1,
-    badge: "Ambattur Central Hub • Direct Store",
-    title: "Direct Retail Store & Express Logistics",
-    subtitle: "From Chennai's Ambattur Hub straight to your doorstep — authentic Kanjeevaram silks, audio tech, Vedic ghee & 24hr express courier.",
+    badge: "Ambattur Central Hub • QNS Logistics & Store",
+    title: "Quick N Smart Direct Store & Express Delivery",
+    subtitle: "From Chennai's Ambattur Hub straight to your doorstep — Ayurvedic wellness, authentic Kanjeevaram silks, audio tech & 24hr express courier.",
     ctaText: "Shop Store Catalog",
     ctaLink: "/products",
-    bgGradient: "from-slate-950/90 via-indigo-950/85 to-indigo-900/90",
+    bgGradient: "from-slate-950/95 via-blue-950/90 to-blue-900/90",
     image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1600&q=80",
     accentTag: "⚡ Same-Day Chennai Dispatch",
   },
   {
     id: 2,
+    badge: "Ayurvedic Healthcare • QNS Official",
+    title: "A2z Pain Relief Kit & Herbal Formulations",
+    subtitle: "Complete herbal joint and muscle relief with Guggul, Shallaki, Triphala, and essential oils. Prepared to ancient classical standards.",
+    ctaText: "Explore Pain Relief Kit",
+    ctaLink: "/products/a2z-painrelief-kit",
+    bgGradient: "from-slate-950/95 via-emerald-950/90 to-blue-950/90",
+    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1600&q=80",
+    accentTag: "100% Herbal & AYUSH Compliant",
+  },
+  {
+    id: 3,
     badge: "Authentic Handlooms • Silk Mark Certified",
     title: "Pure Kanjeevaram & Banarasi Silks",
     subtitle: "Handcrafted directly from master weavers across Tamil Nadu and Varanasi with verified gold and silver zari purity.",
     ctaText: "Shop Handlooms",
     ctaLink: "/products?category=fashion",
-    bgGradient: "from-slate-950/90 via-purple-950/85 to-indigo-950/90",
+    bgGradient: "from-slate-950/95 via-red-950/90 to-blue-950/90",
     image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=80",
     accentTag: "Direct Weaver Sourced",
-  },
-  {
-    id: 3,
-    badge: "Vedic Organics & Saffron",
-    title: "A2 Gir Cow Ghee & Kashmiri Saffron",
-    subtitle: "Traditional Bilona cultured ghee and Grade-1 Mongra saffron stocked in our temperature-controlled Ambattur facility.",
-    ctaText: "Shop Pure Organics",
-    ctaLink: "/products?category=gourmet",
-    bgGradient: "from-slate-950/90 via-amber-950/85 to-orange-950/90",
-    image: "https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=1600&q=80",
-    accentTag: "100% Lab Certified",
   },
 ];
 
@@ -164,15 +164,15 @@ export function HeroCarousel() {
           </div>
 
           {/* Deal of the Day Card (4 Cols on Desktop) */}
-          <div className="lg:col-span-4 bg-gradient-to-br from-brand-primary via-indigo-700 to-brand-secondary p-1 rounded-2xl sm:rounded-3xl shadow-lg flex flex-col">
+          <div className="lg:col-span-4 bg-gradient-to-br from-brand-primary via-blue-800 to-brand-secondary p-1 rounded-2xl sm:rounded-3xl shadow-lg flex flex-col">
             <div className="bg-white rounded-[18px] sm:rounded-[22px] p-4 sm:p-5 flex-1 flex flex-col justify-between">
               {/* Header */}
               <div className="flex items-center justify-between pb-2.5 border-b border-slate-100">
                 <div className="flex items-center gap-1.5 font-bold text-xs uppercase tracking-wider text-brand-primary">
                   <Flame className="w-4 h-4 text-brand-secondary" />
-                  <span>Ambattur Flash Deal</span>
+                  <span>QNS Featured Deal</span>
                 </div>
-                <div className="flex items-center gap-1 text-[11px] font-bold text-slate-700 bg-indigo-50 px-2 py-0.5 rounded-md border border-indigo-100">
+                <div className="flex items-center gap-1 text-[11px] font-bold text-slate-700 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100">
                   <Clock className="w-3 h-3 text-brand-primary" />
                   <span>
                     {String(timeLeft.hours).padStart(2, "0")}:
@@ -186,37 +186,37 @@ export function HeroCarousel() {
               <div className="my-3 sm:my-4">
                 <div className="relative h-36 xs:h-40 sm:h-44 w-full rounded-xl sm:rounded-2xl overflow-hidden bg-slate-100 mb-2.5 border border-slate-200">
                   <Image
-                    src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80"
-                    alt="AuraPods Max ANC"
+                    src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80"
+                    alt="A2z Pain Relief Kit"
                     fill
                     sizes="(max-width: 1024px) 100vw, 300px"
                     className="object-cover"
                   />
-                  <span className="absolute top-2 left-2 bg-brand-primary text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-md shadow-xs">
-                    50% OFF
+                  <span className="absolute top-2 left-2 bg-brand-secondary text-white text-[10px] font-black uppercase px-2 py-0.5 rounded-md shadow-xs">
+                    40% OFF
                   </span>
                 </div>
 
                 <span className="text-[10px] font-bold text-brand-primary uppercase tracking-wider block">
-                  Electronics • Ready in Ambattur Hub
+                  Herbal Wellness • Ready in Ambattur Hub
                 </span>
                 <h3 className="text-xs sm:text-sm font-bold text-slate-900 line-clamp-1 mt-0.5">
-                  AuraPods Max ANC Wireless Earbuds (Spatial Audio)
+                  A2z Pain Relief Kit (Ayurvedic Herbal Oil, Capsules & Balm)
                 </h3>
 
                 <div className="flex items-baseline gap-2 mt-1.5">
                   <span className="text-lg sm:text-xl font-black text-slate-900 font-heading">
-                    {formatINR(3499)}
+                    {formatINR(899)}
                   </span>
                   <span className="text-xs text-slate-400 line-through">
-                    {formatINR(6999)}
+                    {formatINR(1499)}
                   </span>
                 </div>
               </div>
 
               {/* Action Button */}
               <Link
-                href="/products/aurapods-max-anc-wireless-earbuds"
+                href="/products/a2z-painrelief-kit"
                 className="w-full py-2.5 rounded-xl bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold text-xs flex items-center justify-center gap-1.5 hover:opacity-95 shadow-md shadow-brand-primary/20 transition-opacity"
               >
                 <span>Express Order (Ambattur Stock)</span>

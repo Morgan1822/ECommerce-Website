@@ -307,6 +307,46 @@ export const products: Product[] = [
 
   // --- 4. AYURVEDA & WELLNESS (ayurveda) ---
   {
+    id: "prod-ayur-a2z",
+    name: "A2z Pain Relief Kit (Ayurvedic Herbal Oil, Capsules & Balm)",
+    slug: "a2z-painrelief-kit",
+    description: "Holistic herbal pain relief formulated with traditional Indian bio-actives including Guggul, Shallaki, Triphala, Ashwagandha, and Mahanarayan oil. Clinically tested for joint flexibility, muscle stiffness, and chronic back/knee relief.",
+    price: 899,
+    originalPrice: 1499,
+    images: [
+      "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1000&q=80",
+      "https://images.unsplash.com/photo-1608248597359-bb675f35d2ce?auto=format&fit=crop&w=1000&q=80",
+    ],
+    category: "ayurveda",
+    categoryName: "Ayurveda & Wellness",
+    stock: 50,
+    rating: 4.9,
+    reviewsCount: 342,
+    badge: "QNS Official",
+    badgeType: "trending",
+    isFeatured: true,
+    isBestseller: true,
+    isDealOfDay: true,
+    tags: ["pain relief", "a2z", "ayurveda", "guggul", "shallaki", "triphala", "herbal oil", "joint pain"],
+    variants: [
+      { id: "v-a2z-kit-standard", name: "Complete Relief Kit (Oil + Rollon + 60 Caps)", stock: 30 },
+      { id: "v-a2z-kit-duo", name: "Family Pack (2x Full Kits)", stock: 20, priceModifier: 750 },
+    ],
+    features: [
+      "Infused with Pure Guggul, Shallaki, Triphala & Wintergreen extract",
+      "Fast penetrating deep-tissue herbal roll-on for instant relief",
+      "100% Ayurvedic, Non-sticky, Zero mineral oil or synthetic NSAIDs",
+      "Shipped directly from Ambattur Central Hub with tamper-evident seal",
+    ],
+    details: {
+      "Kit Contains": "1x Pain Relief Oil (100ml) + 1x Herbal Roll-on (50ml) + 60 Ayurvedic Capsules",
+      "Key Ingredients": "Shallaki (Boswellia), Nirgundi, Gandhapura, Guggulu, Pudina Satva",
+      "Origin": "Ambattur, Chennai - 600053",
+      "Certification": "GMP Certified & Ministry of AYUSH Compliant",
+    },
+  },
+  {
     id: "prod-ayur-01",
     name: "Himalayan Pure Grade-A Shilajit Resin (20g)",
     slug: "himalayan-pure-grade-a-shilajit-resin",

@@ -34,13 +34,13 @@ export default function AdminDashboardPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       {/* Top Banner */}
-      <div className="bg-gradient-to-r from-gray-950 via-purple-950 to-gray-900 text-white p-6 sm:p-8 rounded-3xl border border-purple-900/50 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-gray-950 via-blue-950 to-gray-900 text-white p-6 sm:p-8 rounded-3xl border border-blue-900/50 shadow-xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <span className="text-xs font-black uppercase tracking-wider text-brand-orange flex items-center gap-1.5 mb-1">
-            <Zap className="w-4 h-4 text-yellow-400 fill-yellow-400" /> Ambattur Hub Dispatch Control (600053)
+          <span className="text-xs font-black uppercase tracking-wider text-brand-secondary flex items-center gap-1.5 mb-1">
+            <Zap className="w-4 h-4 text-amber-400 fill-amber-400" /> Ambattur Hub Dispatch Control (600053)
           </span>
           <h1 className="text-2xl sm:text-3xl font-black font-heading text-white">
-            Quick&apos;n&apos;Smart Merchant & Logistics Portal
+            Quick N Smart Merchant & Logistics Portal
           </h1>
           <p className="text-xs text-gray-400 mt-0.5">
             Real-time parcel dispatch pipeline, warehouse inventory, and sales analytics.
@@ -52,7 +52,7 @@ export default function AdminDashboardPage() {
           <button
             onClick={() => setActiveTab("overview")}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors ${
-              activeTab === "overview" ? "bg-brand-purple text-white" : "text-gray-400 hover:text-white"
+              activeTab === "overview" ? "bg-brand-primary text-white" : "text-gray-400 hover:text-white"
             }`}
           >
             Overview
@@ -60,7 +60,7 @@ export default function AdminDashboardPage() {
           <button
             onClick={() => setActiveTab("orders")}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors ${
-              activeTab === "orders" ? "bg-brand-purple text-white" : "text-gray-400 hover:text-white"
+              activeTab === "orders" ? "bg-brand-primary text-white" : "text-gray-400 hover:text-white"
             }`}
           >
             Shipments ({orders.length})
@@ -68,96 +68,85 @@ export default function AdminDashboardPage() {
           <button
             onClick={() => setActiveTab("inventory")}
             className={`px-4 py-2 rounded-xl text-xs font-bold transition-colors ${
-              activeTab === "inventory" ? "bg-brand-purple text-white" : "text-gray-400 hover:text-white"
+              activeTab === "inventory" ? "bg-brand-primary text-white" : "text-gray-400 hover:text-white"
             }`}
           >
-            Warehouse Stock ({productsList.length})
+            Store Catalog ({productsList.length})
           </button>
         </div>
       </div>
 
-      {/* 1. Overview Tab */}
+      {/* Overview Tab Content */}
       {activeTab === "overview" && (
         <div className="space-y-8">
-          {/* Metrics Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-white p-6 rounded-3xl border border-purple-100 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-2xl bg-purple-50 text-brand-purple flex items-center justify-center">
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <div className="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm space-y-2">
+              <div className="w-10 h-10 rounded-2xl bg-blue-50 text-brand-primary flex items-center justify-center">
                 <IndianRupee className="w-5 h-5" />
               </div>
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block">
-                Total Gross Sales
-              </span>
-              <h3 className="text-2xl font-black text-gray-900 font-heading">
-                {formatINR(totalRevenue)}
-              </h3>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Total Sales (INR)</p>
+              <h3 className="text-2xl font-black text-gray-900 font-heading">{formatINR(totalRevenue)}</h3>
               <span className="text-[11px] font-bold text-emerald-600 flex items-center gap-1">
-                <TrendingUp className="w-3.5 h-3.5" /> +28% Express Fulfillment
+                <TrendingUp className="w-3 h-3" /> +18.4% this month
               </span>
             </div>
 
-            <div className="bg-white p-6 rounded-3xl border border-purple-100 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-orange-50 text-brand-orange flex items-center justify-center">
-                <Truck className="w-5 h-5" />
+            <div className="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm space-y-2">
+              <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                <Package className="w-5 h-5" />
               </div>
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block">
-                Consignments Dispatched
-              </span>
-              <h3 className="text-2xl font-black text-gray-900 font-heading">
-                {totalOrdersCount}
-              </h3>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Dispatches Booked</p>
+              <h3 className="text-2xl font-black text-gray-900 font-heading">{totalOrdersCount}</h3>
               <span className="text-[11px] font-bold text-emerald-600 flex items-center gap-1">
-                <CheckCircle2 className="w-3.5 h-3.5" /> 99.8% On-Time Delivery
+                <CheckCircle2 className="w-3 h-3" /> 99.4% On-time dispatch
               </span>
             </div>
 
-            <div className="bg-white p-6 rounded-3xl border border-purple-100 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
-                <Zap className="w-5 h-5" />
+            <div className="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm space-y-2">
+              <div className="w-10 h-10 rounded-2xl bg-orange-50 text-brand-secondary flex items-center justify-center">
+                <ShoppingBag className="w-5 h-5" />
               </div>
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block">
-                Avg Basket Size
-              </span>
-              <h3 className="text-2xl font-black text-gray-900 font-heading">
-                {formatINR(avgOrderValue)}
-              </h3>
-              <span className="text-[11px] text-gray-400">High direct-to-consumer value</span>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Average Order Value</p>
+              <h3 className="text-2xl font-black text-gray-900 font-heading">{formatINR(avgOrderValue)}</h3>
+              <span className="text-[11px] font-bold text-gray-400">Retail & Logistics avg.</span>
             </div>
 
-            <div className="bg-white p-6 rounded-3xl border border-purple-100 shadow-sm space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-amber-50 text-brand-gold flex items-center justify-center">
+            <div className="bg-white p-6 rounded-3xl border border-blue-100 shadow-sm space-y-2">
+              <div className="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center">
                 <MapPin className="w-5 h-5" />
               </div>
-              <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block">
-                HQ Location
-              </span>
-              <h3 className="text-lg font-black text-gray-900 font-heading">
-                Ambattur, Chennai
-              </h3>
-              <span className="text-[11px] font-bold text-brand-purple">Pin: 600053 • Active Hub</span>
+              <p className="text-xs font-bold text-gray-500 uppercase tracking-wider">Ambattur Dispatch Hub</p>
+              <h3 className="text-lg font-bold text-gray-900">AP Arasu St, Ram Nagar</h3>
+              <span className="text-[11px] font-bold text-brand-primary">Pin: 600053 • Active Hub</span>
             </div>
           </div>
 
-          {/* Quick Orders List */}
-          <div className="bg-white rounded-3xl border border-purple-100 p-6 shadow-sm space-y-4">
-            <h3 className="text-base font-black font-heading text-gray-900">
-              Live Consignments from Ambattur Hub
-            </h3>
+          {/* Recent Orders in Pipeline */}
+          <div className="bg-white rounded-3xl border border-blue-100 p-6 shadow-sm space-y-4">
+            <div className="flex items-center justify-between pb-4 border-b border-gray-100">
+              <h3 className="text-base font-black font-heading text-gray-900">Live Parcel Pipeline</h3>
+              <button
+                onClick={() => setActiveTab("orders")}
+                className="text-xs font-bold text-brand-primary hover:text-brand-secondary"
+              >
+                View Full Log →
+              </button>
+            </div>
             <div className="divide-y divide-gray-100">
-              {orders.map((order) => (
-                <div key={order.id} className="py-3 flex flex-wrap items-center justify-between gap-3 text-xs">
+              {orders.slice(0, 4).map((order) => (
+                <div key={order.id} className="py-3 flex items-center justify-between gap-4 text-xs">
                   <div>
-                    <span className="font-bold text-gray-900">{order.orderNumber}</span>
-                    <span className="text-gray-400 mx-2">•</span>
-                    <span className="text-gray-600">{order.customer.fullName} ({order.customer.city})</span>
+                    <h5 className="font-bold text-gray-900">{order.customer.fullName}</h5>
+                    <p className="text-gray-500 text-[11px]">{order.orderNumber} • {formatDate(order.date)}</p>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <span className="font-extrabold text-brand-purple font-heading">{formatINR(order.total)}</span>
+                  <div className="text-right">
+                    <span className="font-extrabold text-brand-primary font-heading">{formatINR(order.total)}</span>
                     <Link
                       href={`/orders/${order.id}`}
-                      className="px-3 py-1 bg-purple-50 text-brand-purple font-bold rounded-lg hover:bg-purple-100"
+                      className="px-3 py-1 bg-blue-50 text-brand-primary font-bold rounded-lg hover:bg-blue-100 block mt-1"
                     >
-                      Track / Invoice
+                      AWB Track
                     </Link>
                   </div>
                 </div>
@@ -169,7 +158,7 @@ export default function AdminDashboardPage() {
 
       {/* 2. Shipments Fulfillment Tab */}
       {activeTab === "orders" && (
-        <div className="bg-white rounded-3xl border border-purple-100 p-6 shadow-sm space-y-4">
+        <div className="bg-white rounded-3xl border border-blue-100 p-6 shadow-sm space-y-4">
           <h3 className="text-base font-black font-heading text-gray-900">
             Ambattur Hub Dispatch Pipeline
           </h3>
@@ -189,14 +178,14 @@ export default function AdminDashboardPage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {orders.map((order) => (
-                  <tr key={order.id} className="hover:bg-purple-50/40">
+                  <tr key={order.id} className="hover:bg-blue-50/40">
                     <td className="py-3 font-bold text-gray-900">{order.orderNumber}</td>
                     <td className="py-3">{formatDate(order.date)}</td>
                     <td className="py-3 font-medium text-gray-900">{order.customer.fullName}</td>
                     <td className="py-3">{order.customer.city} ({order.customer.pincode})</td>
                     <td className="py-3 uppercase font-bold text-gray-700">{order.paymentMethod}</td>
                     <td className="py-3">
-                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-purple-50 text-brand-purple border border-purple-200">
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-black uppercase tracking-wider bg-blue-50 text-brand-primary border border-blue-200">
                         {order.status}
                       </span>
                     </td>
@@ -204,7 +193,7 @@ export default function AdminDashboardPage() {
                     <td className="py-3 text-right">
                       <Link
                         href={`/orders/${order.id}`}
-                        className="px-3 py-1 rounded-lg bg-gray-900 text-white font-bold text-[11px]"
+                        className="px-3 py-1 rounded-lg bg-brand-primary text-white font-bold text-[11px] hover:bg-brand-primaryHover"
                       >
                         Invoice
                       </Link>
@@ -219,7 +208,7 @@ export default function AdminDashboardPage() {
 
       {/* 3. Warehouse Stock Tab */}
       {activeTab === "inventory" && (
-        <div className="bg-white rounded-3xl border border-purple-100 p-6 shadow-sm space-y-4">
+        <div className="bg-white rounded-3xl border border-blue-100 p-6 shadow-sm space-y-4">
           <div className="flex items-center justify-between pb-3 border-b border-gray-100">
             <h3 className="text-base font-black font-heading text-gray-900">
               Ambattur Warehouse Stock ({productsList.length} Active SKUs)
@@ -240,14 +229,14 @@ export default function AdminDashboardPage() {
               </thead>
               <tbody className="divide-y divide-gray-100">
                 {productsList.map((p) => (
-                  <tr key={p.id} className="hover:bg-purple-50/40">
+                  <tr key={p.id} className="hover:bg-blue-50/40">
                     <td className="py-3 flex items-center gap-3">
                       <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-gray-100 shrink-0">
                         <Image src={p.images[0]} alt={p.name} fill sizes="40px" className="object-cover" />
                       </div>
                       <span className="font-bold text-gray-900 line-clamp-1 max-w-xs">{p.name}</span>
                     </td>
-                    <td className="py-3 font-semibold text-brand-purple">{p.categoryName}</td>
+                    <td className="py-3 font-semibold text-brand-primary">{p.categoryName}</td>
                     <td className="py-3 font-extrabold text-gray-900 font-heading">{formatINR(p.price)}</td>
                     <td className="py-3 text-gray-400 line-through">{formatINR(p.originalPrice)}</td>
                     <td className="py-3">
