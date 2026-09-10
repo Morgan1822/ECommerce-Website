@@ -19,22 +19,23 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Utsav Kart | India's Festive & D2C Heritage Marketplace",
-  description: "Shop certified Kanjeevaram silk handlooms, pure A2 Gir cow ghee, Kashmiri saffron, and made-in-India audio tech. Lightning delivery across 19,000+ Indian pincodes.",
+  title: "Quick'n'Smart | Express Logistics & Direct Retail Store • Ambattur, Chennai",
+  description: "Quick'n'Smart — Premier Domestic Logistics, Courier & Direct E-Commerce Store headquartered in Ambattur, Chennai (600053). Same-day delivery across Chennai and Pan-India express dispatch.",
   keywords: [
-    "Indian ecommerce",
+    "Quick n Smart Ambattur",
+    "Quick and Smart Chennai",
+    "Ambattur logistics",
+    "Chennai courier service",
+    "Direct retail store Chennai",
     "Kanjeevaram silk saree",
     "A2 Gir cow ghee",
-    "Kashmiri saffron",
     "ANC earbuds",
     "UPI payment",
-    "handloom",
-    "festive sale",
   ],
-  authors: [{ name: "Utsav Kart Team" }],
+  authors: [{ name: "Quick'n'Smart Ambattur Team" }],
   openGraph: {
-    title: "Utsav Kart | Indian Festive & D2C Marketplace",
-    description: "Discover authentic Indian handlooms, Vedic organics, and high-performance audio gadgets.",
+    title: "Quick'n'Smart | Logistics & Direct Retail Store",
+    description: "Ambattur, Chennai • Express Courier, Domestic Logistics & Direct E-Commerce Store.",
     type: "website",
     locale: "en_IN",
   },
@@ -47,7 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${jakarta.variable} ${outfit.variable}`}>
-      <body className="min-h-screen flex flex-col bg-[#FFFDF9] text-gray-900 selection:bg-brand-pink/20 selection:text-brand-pink">
+      <body className="min-h-screen flex flex-col bg-[#FAFAFD] text-gray-900 selection:bg-brand-purple/20 selection:text-brand-purple">
         <AnnouncementBar />
         <Navbar />
         <main className="flex-1">{children}</main>
@@ -57,4 +58,3 @@ export default function RootLayout({
     </html>
   );
 }
-

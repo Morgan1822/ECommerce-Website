@@ -9,15 +9,16 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          pink: "#E11D48", // Rani Pink
-          orange: "#EA580C", // Marigold Orange
-          gold: "#D97706", // Royal Indian Gold
-          teal: "#0D9488", // Morpankhi Teal
-          emerald: "#059669", // Shubh Green
-          deep: "#0F172A",
-          surface: "#FFFDF9",
+          purple: "#7C3AED", // Quick'n'Smart Purple
+          indigo: "#4F46E5",
+          orange: "#EA580C", // Quick'n'Smart Speed Orange
+          gold: "#F59E0B",   // Smart Lightbulb Yellow
+          pink: "#E11D48",
+          teal: "#0D9488",
+          emerald: "#059669",
+          surface: "#FAFAFD",
           card: "#FFFFFF",
-          cream: "#FEF9F3",
+          cream: "#FEFAF6",
         },
       },
       fontFamily: {
@@ -25,26 +26,15 @@ module.exports = {
         heading: ["var(--font-outfit)", "sans-serif"],
       },
       boxShadow: {
-        festive: "0 8px 30px -4px rgba(225, 29, 72, 0.15)",
-        gold: "0 8px 30px -4px rgba(217, 119, 6, 0.2)",
-        glow: "0 0 25px rgba(234, 88, 12, 0.25)",
+        smart: "0 8px 30px -4px rgba(124, 58, 237, 0.18)",
+        speed: "0 8px 30px -4px rgba(234, 88, 12, 0.22)",
       },
       borderRadius: {
         xl: "1rem",
         "2xl": "1.25rem",
         "3xl": "1.75rem",
       },
-      animation: {
-        pulseGlow: "pulseGlow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
-      },
-      keyframes: {
-        pulseGlow: {
-          "0%, 100%": { opacity: "1", transform: "scale(1)" },
-          "50%": { opacity: ".85", transform: "scale(1.02)" },
-        },
-      },
     },
   },
   plugins: [],
 };
-
