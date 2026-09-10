@@ -20,34 +20,34 @@ import { formatINR } from "@/lib/utils";
 const bannerSlides = [
   {
     id: 1,
-    badge: "Ambattur Central Hub • QNS Logistics & Store",
+    badge: "Ambattur Central Hub • QNS Direct Store",
     title: "Quick N Smart Direct Store & Express Delivery",
-    subtitle: "From Chennai's Ambattur Hub straight to your doorstep — Ayurvedic wellness, authentic Kanjeevaram silks, audio tech & 24hr express courier.",
+    subtitle: "From Chennai's Ambattur Hub straight to your doorstep — Ayurvedic wellness, Kanjeevaram silks, audio tech & 24hr express courier.",
     ctaText: "Shop Store Catalog",
     ctaLink: "/products",
-    bgGradient: "from-slate-950/95 via-blue-950/90 to-blue-900/90",
+    bgGradient: "from-slate-950/95 via-blue-950/90 to-blue-900/85",
     image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=1600&q=80",
     accentTag: "⚡ Same-Day Chennai Dispatch",
   },
   {
     id: 2,
     badge: "Ayurvedic Healthcare • QNS Official",
-    title: "A2z Pain Relief Kit & Herbal Formulations",
-    subtitle: "Complete herbal joint and muscle relief with Guggul, Shallaki, Triphala, and essential oils. Prepared to ancient classical standards.",
+    title: "A2z Pain Relief Kit & Herbal Care",
+    subtitle: "Complete herbal joint and muscle relief with Guggul, Shallaki, Triphala, and essential oils. Prepared to AYUSH standards.",
     ctaText: "Explore Pain Relief Kit",
     ctaLink: "/products/a2z-painrelief-kit",
-    bgGradient: "from-slate-950/95 via-emerald-950/90 to-blue-950/90",
+    bgGradient: "from-slate-950/95 via-emerald-950/90 to-blue-950/85",
     image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=1600&q=80",
-    accentTag: "100% Herbal & AYUSH Compliant",
+    accentTag: "100% Herbal Certified",
   },
   {
     id: 3,
     badge: "Authentic Handlooms • Silk Mark Certified",
     title: "Pure Kanjeevaram & Banarasi Silks",
     subtitle: "Handcrafted directly from master weavers across Tamil Nadu and Varanasi with verified gold and silver zari purity.",
-    ctaText: "Shop Handlooms",
+    ctaText: "Explore Handlooms",
     ctaLink: "/products?category=fashion",
-    bgGradient: "from-slate-950/95 via-red-950/90 to-blue-950/90",
+    bgGradient: "from-slate-950/95 via-red-950/90 to-blue-950/85",
     image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1600&q=80",
     accentTag: "Direct Weaver Sourced",
   },
@@ -83,7 +83,7 @@ export function HeroCarousel() {
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-6 items-stretch">
           {/* Main Hero Banner Slide (8 Cols on Desktop) */}
-          <div className="lg:col-span-8 relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg min-h-[340px] xs:min-h-[380px] sm:min-h-[420px] md:min-h-[460px] flex items-center">
+          <div className="lg:col-span-8 relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg h-[440px] xs:h-[460px] sm:h-[490px] md:h-[510px] flex flex-col justify-between p-6 sm:p-9 md:p-11">
             {/* Background Image with Overlay */}
             <div className="absolute inset-0 z-0">
               <Image
@@ -97,69 +97,77 @@ export function HeroCarousel() {
               <div className={`absolute inset-0 bg-gradient-to-r ${slide.bgGradient}`} />
             </div>
 
-            {/* Slide Content */}
-            <div className="relative z-10 p-5 sm:p-8 md:p-12 text-white max-w-xl">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 backdrop-blur-md text-amber-300 text-[10px] sm:text-xs font-black uppercase tracking-wider mb-3 sm:mb-4 border border-white/20">
+            {/* Top Badge */}
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-amber-300 text-[10px] sm:text-xs font-black uppercase tracking-wider border border-white/20 shadow-xs">
                 <Zap className="w-3.5 h-3.5 fill-amber-300" />
                 <span>{slide.badge}</span>
               </div>
+            </div>
 
-              <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-black font-heading leading-tight tracking-tight mb-2 sm:mb-3">
+            {/* Middle Content: Fixed Height Text Area */}
+            <div className="relative z-10 max-w-xl my-auto">
+              <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-[38px] xl:text-[42px] font-black font-heading leading-[1.15] tracking-tight text-white mb-3 min-h-[58px] sm:min-h-[76px] md:min-h-[92px] flex items-center">
                 {slide.title}
               </h1>
 
-              <p className="text-xs sm:text-sm md:text-base text-slate-200 mb-4 sm:mb-6 font-normal leading-relaxed line-clamp-3 sm:line-clamp-none">
+              <p className="text-xs sm:text-sm md:text-base text-slate-200 font-normal leading-relaxed line-clamp-2 sm:line-clamp-3 min-h-[38px] sm:min-h-[48px] flex items-center">
                 {slide.subtitle}
               </p>
+            </div>
 
-              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-                <Link
-                  href={slide.ctaLink}
-                  className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold text-xs sm:text-sm hover:opacity-95 shadow-md shadow-brand-primary/30 flex items-center gap-2 transition-all"
-                >
-                  <span>{slide.ctaText}</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+            {/* Bottom Actions: Anchored at Identical Baseline across all slides */}
+            <div className="relative z-10 flex flex-wrap sm:flex-nowrap items-center gap-2.5 sm:gap-3.5 pt-2">
+              <Link
+                href={slide.ctaLink}
+                className="px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-bold text-xs sm:text-sm hover:opacity-95 shadow-lg shadow-brand-primary/30 flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shrink-0"
+              >
+                <span>{slide.ctaText}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
 
-                <div className="px-3 py-2 rounded-full bg-black/40 backdrop-blur-md text-white/90 text-[11px] sm:text-xs font-bold border border-white/15 flex items-center gap-1.5">
-                  <Truck className="w-3.5 h-3.5 text-amber-300" />
-                  <span>{slide.accentTag}</span>
-                </div>
+              <div className="px-3.5 py-2.5 rounded-full bg-black/40 backdrop-blur-md text-white/95 text-[11px] sm:text-xs font-semibold border border-white/15 flex items-center gap-1.5 shrink-0">
+                <Truck className="w-3.5 h-3.5 text-amber-300" />
+                <span>{slide.accentTag}</span>
               </div>
             </div>
 
-            {/* Navigation Buttons */}
-            <div className="absolute bottom-3 right-3 sm:bottom-4 sm:right-4 z-20 flex items-center gap-1.5 sm:gap-2">
+            {/* Slide Navigation Controls */}
+            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 z-20 flex items-center gap-2">
               <button
                 onClick={() =>
                   setCurrentSlide((prev) => (prev - 1 + bannerSlides.length) % bannerSlides.length)
                 }
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md flex items-center justify-center transition-colors"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 hover:bg-white/35 active:bg-white/50 text-white backdrop-blur-md flex items-center justify-center transition-all border border-white/20 shadow-xs"
                 aria-label="Previous Banner"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => setCurrentSlide((prev) => (prev + 1) % bannerSlides.length)}
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 hover:bg-white/40 text-white backdrop-blur-md flex items-center justify-center transition-colors"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/20 hover:bg-white/35 active:bg-white/50 text-white backdrop-blur-md flex items-center justify-center transition-all border border-white/20 shadow-xs"
                 aria-label="Next Banner"
               >
                 <ChevronRight className="w-4 h-4" />
               </button>
             </div>
 
-            {/* Dot Indicators */}
-            <div className="absolute bottom-3.5 left-5 sm:bottom-4 sm:left-8 z-20 flex items-center gap-1.5">
-              {bannerSlides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setCurrentSlide(idx)}
-                  className={`h-1.5 sm:h-2 rounded-full transition-all ${
-                    idx === currentSlide ? "w-5 sm:w-6 bg-brand-secondary" : "w-1.5 sm:w-2 bg-white/50"
-                  }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
+            {/* Dot & Slide Number Indicators */}
+            <div className="absolute bottom-5 left-6 sm:bottom-7 sm:left-10 z-20 flex items-center gap-2">
+              <div className="flex items-center gap-1.5 bg-black/30 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                {bannerSlides.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentSlide(idx)}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      idx === currentSlide
+                        ? "w-6 bg-brand-secondary shadow-xs"
+                        : "w-2 bg-white/40 hover:bg-white/70"
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
