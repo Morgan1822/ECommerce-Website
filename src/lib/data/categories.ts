@@ -1,0 +1,55 @@
+import { Category } from "@/types";
+
+export const categories: Category[] = [
+  {
+    id: "cat-fashion",
+    name: "Handlooms & Ethnic",
+    slug: "fashion",
+    description: "Authentic Kanjeevaram, Banarasi, Chanderi silks and festive kurtas crafted by master Indian weavers.",
+    iconName: "Sparkles",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    itemCount: 24,
+    isFeatured: true,
+  },
+  {
+    id: "cat-gourmet",
+    name: "Gourmet & Organics",
+    slug: "gourmet",
+    description: "Pure Vedic A2 Gir cow ghee, GI-tagged Kashmiri Mongra saffron, and cold-pressed single-estate spices.",
+    iconName: "Wheat",
+    image: "https://images.unsplash.com/photo-1589927986089-35812388d1f4?auto=format&fit=crop&w=800&q=80",
+    itemCount: 18,
+    isFeatured: true,
+  },
+  {
+    id: "cat-tech",
+    name: "D2C Audio & Gadgets",
+    slug: "tech",
+    description: "High-bass ANC wireless earbuds, AMOLED smartwatches, and GaN fast chargers built for India.",
+    iconName: "Headphones",
+    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80",
+    itemCount: 16,
+    isFeatured: true,
+  },
+  {
+    id: "cat-ayurveda",
+    name: "Ayurveda & Wellness",
+    slug: "ayurveda",
+    description: "High-altitude Himalayan Shilajit, KSM-66 Ashwagandha, and Charaka Samhita Kumkumadi beauty elixirs.",
+    iconName: "Leaf",
+    image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80",
+    itemCount: 15,
+    isFeatured: true,
+  },
+  {
+    id: "cat-decor",
+    name: "Artisanal Brass & Decor",
+    slug: "decor",
+    description: "Moradabad hand-chiseled brass peacock lamps, tribal Dhokra bell metal idols, and Saharanpur woodwork.",
+    iconName: "Flame",
+    image: "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&w=800&q=80",
+    itemCount: 20,
+    isFeatured: true,
+  },
+];
+

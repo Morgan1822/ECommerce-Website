@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+body {
+  background-color: #fffdfa;
+  color: #0f172a;
+  font-family: var(--font-jakarta);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom festive gradients */
+.bg-festive-hero {
+  background: radial-gradient(circle at 90% 10%, rgba(225, 29, 72, 0.08) 0%, transparent 40%),
+              radial-gradient(circle at 10% 90%, rgba(234, 88, 12, 0.08) 0%, transparent 40%);
+}
+
+.text-gradient-festive {
+  background: linear-gradient(135deg, #e11d48 0%, #ea580c 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom scrollbar for horizontal category pills */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
