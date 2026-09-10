@@ -16,6 +16,7 @@ import {
 import { categories } from "@/lib/data/categories";
 
 import { BrandLogo } from "./brand-logo";
+import { PaymentBadges } from "./payment-badges";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -162,24 +163,8 @@ export function Footer() {
             <span>for Indian Retail & Express Logistics.</span>
           </div>
 
-          {/* Payment Chips */}
-          <div className="flex flex-wrap items-center justify-center gap-1.5 text-[11px] font-bold">
-            <span className="px-2 py-0.5 bg-slate-900 rounded border border-slate-800 text-amber-300">
-              BHIM UPI
-            </span>
-            <span className="px-2 py-0.5 bg-slate-900 rounded border border-slate-800 text-blue-400">
-              Google Pay
-            </span>
-            <span className="px-2 py-0.5 bg-slate-900 rounded border border-slate-800 text-indigo-400">
-              PhonePe
-            </span>
-            <span className="px-2 py-0.5 bg-slate-900 rounded border border-slate-800 text-emerald-400">
-              RuPay
-            </span>
-            <span className="px-2 py-0.5 bg-slate-900 rounded border border-slate-800 text-slate-300">
-              COD
-            </span>
-          </div>
+          {/* Payment Badges with official brand logos & icons */}
+          <PaymentBadges />
         </div>
       </div>
     </footer>
